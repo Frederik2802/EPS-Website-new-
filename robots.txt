@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.eps-global.com/sitemap.xml
