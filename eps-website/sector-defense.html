@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Defense Sector Lubricants | EPS GmbH</title>
+<meta name="description" content="Specification first lubricant supply for demanding fleets, with batch documentation and dependable logistics from Hamburg.">
+<style>
+:root{
+  --floor:#F7F8F9;--white:#FFF;--panel:#EFF1F2;--line:#E0E3E5;--line-dark:#0F1113;
+  --ink:#0F1113;--gun:#3B3E42;--mute:#7B7E83;--steel:#AEB1B3;
+  --red:#C41E28;--red-hi:#D6444D;--red-deep:#8E1219;--well:#101214;
+  --t-fast:200ms;--t-base:300ms;--ease:cubic-bezier(.2,.85,.25,1);
+  --maxw:1300px;--pad:clamp(20px,5vw,56px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--floor);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--red);color:#fff}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+.disp{font-weight:800;text-transform:uppercase;line-height:.95;letter-spacing:-.015em;font-variation-settings:'wdth' 117;color:var(--ink)}
+h2.disp{font-size:clamp(26px,3.4vw,42px)}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:30px;height:1px;background:var(--red)}
+header{position:sticky;top:0;z-index:90;background:var(--header-bg);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:34px;padding:0 var(--pad);max-width:var(--maxw);margin:0 auto;height:80px}
+.bar .lg img{height:50px;width:auto;transition:height .25s var(--ease)}
+nav{display:flex;gap:28px;margin-left:8px}
+nav a{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gun);position:relative;padding:6px 0;transition:color var(--t-fast) var(--ease)}
+nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--red);transition:right var(--t-base) var(--ease)}
+nav a:hover{color:var(--ink)}nav a:hover::after{right:0}
+nav a.on{color:var(--ink)}nav a.on::after{right:0}
+.bar .hcta{margin-left:auto}
+@media(max-width:900px){nav{display:none}}
+.btn{display:inline-flex;align-items:center;gap:12px;cursor:pointer;user-select:none;font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-variation-settings:'wdth' 108;padding:15px 28px;border:1px solid var(--ink);background:transparent;color:var(--ink);transition:background var(--t-fast) var(--ease),color var(--t-fast) var(--ease),border-color var(--t-fast) var(--ease),transform var(--t-fast) var(--ease)}
+.btn:hover{background:var(--ink);color:var(--floor)}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.btn .arr{font-family:'IBM Plex Mono',monospace;font-weight:400;transition:transform var(--t-fast) var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn-red{background:var(--red);border-color:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-deep);border-color:var(--red-deep);color:#fff}
+.btn-sm{padding:11px 20px;font-size:12px}
+.btn-inv{border-color:#fff;color:#fff}.btn-inv:hover{background:var(--white);color:var(--ink)}
+section{padding:80px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:44px}
+.idx{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--red);letter-spacing:.08em}
+.sec-sub{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--mute);margin-left:auto;letter-spacing:.06em;text-align:right}
+.crumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--mute);text-transform:uppercase;padding:22px 0 0}
+.crumb a:hover{color:var(--red)}
+.crumb .sep{margin:0 8px;color:var(--line-dark);opacity:.3}
+.machine{position:relative;background:var(--well);overflow:hidden;isolation:isolate;display:flex;align-items:flex-end}
+.machine .footage{position:absolute;inset:-8%;z-index:-2;background:radial-gradient(85% 65% at 70% 32%, rgba(214,68,77,.15), transparent 58%),conic-gradient(from 220deg at 58% 42%, #0D0F12, #1C2025, #0B0D10, #15181C, #0D0F12);animation:pan 26s var(--ease) infinite alternate}
+@keyframes pan{to{transform:scale(1.08) translate(-2%,1.2%)}}
+.machine .grain{position:absolute;inset:0;z-index:-1;opacity:.4;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
+.machine .scrim{position:absolute;inset:0;z-index:-1;background:linear-gradient(185deg,rgba(16,18,20,.12) 38%,rgba(16,18,20,.8) 88%)}
+.machine .vidtag{position:absolute;top:16px;right:16px;display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#CDD0D3;padding:6px 10px;background:rgba(16,18,20,.55);border:1px solid rgba(255,255,255,.16);z-index:2}
+.machine .vidtag .dot{width:6px;height:6px;background:var(--red-hi);animation:blink 1.6s steps(2) infinite}
+@keyframes blink{50%{opacity:.25}}
+.chip{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;border:1px solid var(--line);padding:3px 9px;margin:2px 4px 2px 0;background:var(--floor);color:var(--gun)}
+.chip.dark{border-color:rgba(255,255,255,.25);background:transparent;color:#CDD0D3}
+table.spec{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--white)}
+table.spec th{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);text-align:left;padding:12px 14px;border-bottom:1px solid var(--line-dark)}
+table.spec td{padding:12px 14px;border-bottom:1px solid var(--line);color:var(--gun)}
+table.spec td:first-child{color:var(--ink);font-weight:600}
+table.spec .mono{font-size:12px;color:var(--gun)}
+table.spec tr:hover td{background:var(--floor)}
+.tc{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--red);letter-spacing:.08em}
+.cta-band{background:var(--well);color:#CDD0D3;position:relative;overflow:hidden;border-top:0}
+.cta-band .glow{position:absolute;inset:0;background:radial-gradient(60% 70% at 80% 20%, rgba(214,68,77,.09), transparent 60%);pointer-events:none}
+.cta-band .in{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;position:relative}
+.cta-band h2{font-weight:800;text-transform:uppercase;font-variation-settings:'wdth' 116;font-size:clamp(24px,3.2vw,40px);line-height:.95;color:#fff}
+.cta-band p{margin-top:8px;color:#AEB1B3;max-width:48ch;font-size:14.5px}
+footer{background:var(--white);border-top:1px solid var(--line);padding:44px 0 36px}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:36px;max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+@media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr}}
+.fgrid img{height:42px;width:auto;margin-bottom:16px}
+.fgrid .tag{font-size:13px;color:var(--mute);max-width:30ch}
+.fgrid h5{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);margin-bottom:14px}
+.fgrid ul{list-style:none}.fgrid li{margin-bottom:9px}
+.fgrid li a{font-size:13.5px;color:var(--gun);transition:color var(--t-fast) var(--ease)}
+.fgrid li a:hover{color:var(--red)}
+.legal{max-width:var(--maxw);margin:36px auto 0;padding:20px var(--pad) 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--mute);letter-spacing:.06em}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+.shero{position:relative;min-height:86vh;display:flex;flex-direction:column;justify-content:flex-end}
+.shero .in{padding:0 var(--pad) 54px;max-width:var(--maxw);margin:0 auto;width:100%;position:relative}
+.shero .sk{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:#CDD0D3;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.shero .sk::before{content:"";width:30px;height:1px;background:var(--red-hi)}
+.shero h1{font-weight:800;text-transform:uppercase;line-height:.9;letter-spacing:-.02em;font-variation-settings:'wdth' 121;font-size:clamp(40px,8.5vw,128px);color:#fff}
+.shero p{max-width:52ch;margin-top:18px;color:#D5D8DB;font-size:17px}
+.shero .ticks{position:absolute;left:0;right:0;bottom:0;height:18px;border-top:1px solid rgba(255,255,255,.14);background:repeating-linear-gradient(90deg,rgba(255,255,255,.14) 0 1px,transparent 1px 40px)}
+.shero .cue{position:absolute;right:var(--pad);bottom:70px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;color:#7B7E83;writing-mode:vertical-rl;display:flex;align-items:center;gap:10px}
+.shero .cue::after{content:"";width:1px;height:44px;background:linear-gradient(#7B7E83,transparent);animation:cue 1.8s var(--ease) infinite}
+@keyframes cue{50%{transform:translateY(8px);opacity:.4}}
+.demands{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:880px){.demands{grid-template-columns:1fr}}
+.dm{background:var(--white);border:1px solid var(--line);padding:26px 24px;position:relative}
+.dm .dn{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--red);letter-spacing:.1em}
+.dm h3{font-weight:700;text-transform:uppercase;font-variation-settings:'wdth' 108;font-size:17px;margin-top:10px}
+.dm p{font-size:13.5px;color:var(--mute);margin-top:8px}
+.recs{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+@media(max-width:900px){.recs{grid-template-columns:repeat(2,1fr)}}
+.rec{border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white);padding:24px 22px;min-height:150px;display:flex;flex-direction:column;transition:background var(--t-base) var(--ease);position:relative}
+.rec:hover{background:var(--floor)}
+.rec .edge{position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--red);transform:scaleY(0);transform-origin:top;transition:transform var(--t-base) var(--ease)}
+.rec:hover .edge{transform:scaleY(1)}
+.rec .fn{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--mute);letter-spacing:.1em}
+.rec h4{font-weight:800;text-transform:uppercase;font-variation-settings:'wdth' 112;font-size:19px;margin-top:8px}
+.rec span.why{font-size:12.5px;color:var(--mute);margin-top:6px}
+.rec .go{margin-top:auto;padding-top:12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:var(--red)}
+
+.lang{display:flex;margin-left:16px;border:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em}
+.lang a,.lang .on{padding:8px 11px;color:var(--mute);display:inline-block;transition:color var(--t-fast) var(--ease),background var(--t-fast) var(--ease)}
+.lang a:hover{color:var(--ink)}
+.lang .on{background:var(--ink);color:var(--floor)}
+
+/* ===== dark theme tokens ===== */
+:root{--header-bg:rgba(255,255,255,.92);--surface-2:#EFF1F2;--shadow:rgba(15,17,19,.10)}
+:root[data-theme="dark"]{
+  --floor:#0E1013;--white:#161A1F;--panel:#1B2026;--line:#2A3038;--line-dark:#39414A;
+  --ink:#F1F3F5;--gun:#BFC5CC;--mute:#868D96;--steel:#5C646E;
+  --red:#D6444D;--red-hi:#E76B73;--red-deep:#A81D26;
+  --header-bg:rgba(14,16,19,.94);--surface-2:#1B2026;--shadow:rgba(0,0,0,.5);
+  color-scheme:dark;
+}
+:root[data-theme="dark"] .grain{opacity:.28}
+:root[data-theme="dark"] .btn:hover{background:var(--ink);color:var(--floor)}
+:root[data-theme="dark"] img.cardbg{filter:brightness(.88)}
+html{transition:none}
+body,header,footer,section,.btn,input,select,textarea{transition:background-color .25s ease,color .25s ease,border-color .25s ease}
+
+/* ===== scroll progress ===== */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--red);z-index:200;transition:width .08s linear;pointer-events:none}
+
+/* ===== header utilities ===== */
+.util{display:flex;align-items:center;gap:10px;margin-left:14px}
+.iconbtn{width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);background:transparent;color:var(--gun);cursor:pointer;padding:0;transition:border-color .2s ease,color .2s ease,background .2s ease}
+.iconbtn:hover{border-color:var(--ink);color:var(--ink)}
+.iconbtn:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.iconbtn svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+header:not(.scrolled) .iconbtn{border-color:rgba(255,255,255,.35);color:#CDD0D3}
+header:not(.scrolled) .iconbtn:hover{border-color:#fff;color:#fff}
+.lang a.on{cursor:default}
+
+/* ===== mobile menu ===== */
+@media(max-width:900px){
+  .bar{gap:10px;padding-inline:16px}
+  .bar .lg{margin-right:auto}
+  .bar .lg img{height:38px}
+  .bar .hcta,.bar .cta{margin-left:0}
+  .util{margin-left:0;gap:8px}
+  .lang{margin-left:0}
+  .iconbtn{width:34px;height:34px}
+}
+@media(max-width:680px){
+  .bar .hcta,.bar .cta{display:none}
+}
+
+.burger{display:none}
+@media(max-width:900px){
+  .burger{display:inline-flex}
+  .bar .hcta,.bar .cta{margin-left:auto}
+  .bar .hcta .btn,.bar .cta .btn{padding:10px 14px;font-size:11px}
+  .util{margin-left:8px;gap:8px}
+  .lang{margin-left:0}
+}
+#mobnav{position:fixed;inset:0;z-index:150;background:var(--floor);transform:translateY(-100%);transition:transform .38s cubic-bezier(.2,.85,.25,1);display:flex;flex-direction:column;padding:22px;overflow-y:auto}
+#mobnav.open{transform:translateY(0)}
+#mobnav .mhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
+#mobnav .mhead img{height:32px}
+#mobnav nav{display:block!important;flex-direction:column;gap:0;margin:0}
+#mobnav a.mlink{display:block;font-weight:800;text-transform:uppercase;font-variation-settings:'wdth' 114;font-size:clamp(28px,8vw,40px);line-height:1.25;color:var(--ink);border-bottom:1px solid var(--line);padding:14px 0;transition:color .2s ease,padding-left .2s ease}
+#mobnav a.mlink:hover,#mobnav a.mlink:focus-visible{color:var(--red);padding-left:8px}
+#mobnav .mfoot{margin-top:auto;padding-top:26px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+body.navopen{overflow:hidden}
+
+/* ===== back to top ===== */
+#totop{position:fixed;right:20px;bottom:20px;z-index:120;width:46px;height:46px;border:1px solid var(--line);background:var(--white);color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .3s ease,transform .3s ease,background .2s ease,border-color .2s ease;box-shadow:0 6px 20px var(--shadow)}
+#totop.show{opacity:1;transform:none;pointer-events:auto}
+#totop:hover{background:var(--red);border-color:var(--red);color:#fff}
+#totop:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+#totop svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ===== legacy notice (replaced by consent manager) ===== */
+#cookie{position:fixed;left:20px;bottom:20px;z-index:130;max-width:400px;background:var(--white);border:1px solid var(--line);padding:20px 22px;box-shadow:0 14px 40px var(--shadow);transform:translateY(140%);transition:transform .45s cubic-bezier(.2,.85,.25,1)}
+#cookie.show{transform:none}
+@media(max-width:560px){#cookie{left:12px;right:12px;bottom:12px;max-width:none}}
+#cookie p{font-size:13.5px;color:var(--gun);margin-bottom:14px}
+#cookie .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+#cookie .lnk{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--mute);border-bottom:1px solid var(--line)}
+#cookie .lnk:hover{color:var(--red);border-color:var(--red)}
+
+/* ===== loading + hover polish ===== */
+@keyframes pagein{from{opacity:0}to{opacity:1}}
+body{animation:pagein .45s ease both}
+@keyframes shimmer{0%{background-position:-500px 0}100%{background-position:500px 0}}
+.machine:not(.ready)::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(100deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.055) 50%,rgba(255,255,255,0) 70%);
+  background-size:1000px 100%;animation:shimmer 1.5s infinite linear}
+a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.g,.dm,.loc,.rl,.rec,.tech{transition:transform .3s cubic-bezier(.2,.85,.25,1),box-shadow .3s ease,background .3s ease,border-color .3s ease}
+.dm:hover,.loc:hover{transform:translateY(-3px);box-shadow:0 14px 30px var(--shadow)}
+.claim:hover,.pr:hover{background:var(--floor)}
+.dr:hover,.inq-item:hover{background:var(--floor)}
+.fgrid li a{position:relative}
+.fgrid li a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1px;background:var(--red);transition:right .28s cubic-bezier(.2,.85,.25,1)}
+.fgrid li a:hover::after{right:0}
+.chip{transition:border-color .2s ease,color .2s ease}
+tr:hover .chip{border-color:var(--mute)}
+.doc-pending{opacity:.45;cursor:not-allowed;text-decoration:line-through}
+.prow .act span.doc-pending{border:1px solid var(--line);padding:7px 12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;color:var(--mute);display:inline-block}
+.drow .get.doc-pending{display:inline-block}
+
+@media (prefers-reduced-motion: reduce){
+  body{animation:none}
+  #mobnav,#cookie,#totop,#progress{transition:none}
+  .machine:not(.ready)::after{animation:none;content:none}
+}
+
+/* ===== consent manager ===== */
+#cc{position:fixed;left:20px;bottom:20px;z-index:140;width:min(430px,calc(100vw - 40px));
+  background:var(--white);border:1px solid var(--line);box-shadow:0 18px 50px var(--shadow);
+  transform:translateY(150%);transition:transform .45s cubic-bezier(.2,.85,.25,1)}
+#cc.show{transform:none}
+@media(max-width:560px){#cc{left:12px;bottom:12px;width:calc(100vw - 24px)}}
+#cc h2{font-weight:800;text-transform:uppercase;font-variation-settings:'wdth' 110;font-size:15px;letter-spacing:.04em;color:var(--ink);margin-bottom:10px}
+#cc p{font-size:13px;line-height:1.55;color:var(--gun)}
+.cc-main,.cc-panel{padding:22px 24px}
+.cc-panel{max-height:min(70vh,520px);overflow-y:auto}
+.cc-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px}
+.cc-link{background:none;border:0;padding:0;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;
+  color:var(--mute);border-bottom:1px solid var(--line);transition:color .2s ease,border-color .2s ease}
+.cc-link:hover{color:var(--red);border-color:var(--red)}
+.cc-cat{border-top:1px solid var(--line);padding:16px 0}
+.cc-cat:first-child{border-top:0;padding-top:0}
+.cc-cat-h{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
+.cc-cat-h b{font-weight:700;text-transform:uppercase;font-variation-settings:'wdth' 108;font-size:13px;letter-spacing:.06em;color:var(--ink)}
+.cc-always{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--mute)}
+.cc-sw{position:relative;display:inline-block;width:42px;height:22px;flex:0 0 auto;cursor:pointer}
+.cc-sw input{opacity:0;width:0;height:0;position:absolute}
+.cc-sw span{position:absolute;inset:0;background:var(--line);transition:background .22s ease}
+.cc-sw span::before{content:"";position:absolute;left:2px;top:2px;width:18px;height:18px;background:var(--white);
+  box-shadow:0 1px 3px rgba(0,0,0,.35);transition:transform .22s cubic-bezier(.2,.85,.25,1)}
+:root[data-theme="dark"] .cc-sw span::before{background:var(--gun)}
+.cc-sw input:checked + span{background:var(--red)}
+.cc-sw input:checked + span::before{transform:translateX(20px)}
+.cc-sw input:focus-visible + span{outline:2px solid var(--red);outline-offset:2px}
+@media (prefers-reduced-motion: reduce){#cc,.cc-sw span,.cc-sw span::before{transition:none}}
+</style>
+<link rel="stylesheet" href="assets/eps-2026.css?v=6c33a4af">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EPS GmbH">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Defense Sector Lubricants | EPS GmbH">
+<meta property="og:description" content="Specification first lubricant supply for demanding fleets, with batch documentation and dependable logistics from Hamburg.">
+<meta property="og:image" content="media/video/hero-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0E1113">
+<link rel="alternate" hreflang="en" href="sector-defense.html">
+<link rel="alternate" hreflang="de" href="de/sector-defense.html">
+</head>
+<body data-page="sector-defense">
+<header class="top">
+  <div class="top-in">
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="burger" aria-hidden="true"><i></i><i></i><i></i></span><span class="mb-t">Menu</span></button>
+    <a class="brand" href="/"><img src="assets/eps-logo.webp" alt="EPS. Home" width="720" height="308"></a>
+    <div class="top-r">
+      <div class="lang"><span aria-current="true" class="on">EN</span><a href="/de/sector-defense" hreflang="de">DE</a></div>
+      <a class="top-cta" href="/contact">Request a quote</a>
+    </div>
+  </div>
+</header>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="menu-scrim" data-close></div>
+  <div class="menu-panel">
+    <div class="menu-top"><button class="menu-close" type="button" data-close><span class="x" aria-hidden="true"></span><span>Close</span></button><img src="assets/eps-logo.webp" alt="" width="720" height="308"></div>
+    <nav class="menu-nav" aria-label="Main"><ul class="m1"><li class="m1-i has-m2" style="--i:0"><button class="m1-t" type="button" aria-expanded="false">Sectors<span class="dash" aria-hidden="true"></span></button><div class="m2"><a href="/sector-automotive"><b>Automotive</b><span>Passenger-car service fills, workshop and trade supply.</span></a><a href="/sector-performance"><b>Performance</b><span>Race-proven chemistry for engines that live at the limit.</span></a><a href="/sector-transport"><b>Transport</b><span>Long-drain fleet lubrication and AdBlue® at scale.</span></a><a href="/sector-industrial"><b>Industrial</b><span>Hydraulics, circulation and greases for continuous plant.</span></a><a href="/sector-agrar"><b>Agrar</b><span>Field machinery that cannot stop for a season.</span></a><a href="/sector-defense" aria-current="page"><b>Defense</b><span>Specification-first supply for demanding fleets.</span></a><a class="all" href="/sectors"><b>All sectors →</b></a></div></li><li class="m1-i has-m2" style="--i:1"><button class="m1-t" type="button" aria-expanded="false">Products<span class="dash" aria-hidden="true"></span></button><div class="m2"><a href="/family-motor"><b>EPS Motor</b><span>Engine oils</span></a><a href="/family-gear"><b>EPS Gear</b><span>Transmission &amp; axle oils</span></a><a href="/family-hydro"><b>EPS Hydro</b><span>Hydraulic &amp; circulation oils</span></a><a href="/family-grease"><b>EPS Grease</b><span>Greases &amp; lubricating fats</span></a><a href="/family-brake"><b>EPS Brake</b><span>Brake fluid</span></a><a href="/family-additiv"><b>EPS Additiv</b><span>Additives</span></a><a href="/family-blue"><b>EPS Blue</b><span>AdBlue® / DEF</span></a><a href="/family-arctic"><b>EPS Arctic</b><span>Anti-frost &amp; winter care</span></a><a class="all" href="/products"><b>All families →</b></a></div></li><li class="m1-i" style="--i:2"><a class="m1-t" href="/company">Company<span class="dash" aria-hidden="true"></span></a></li><li class="m1-i" style="--i:3"><a class="m1-t" href="/downloads">Downloads<span class="dash" aria-hidden="true"></span></a></li><li class="m1-i" style="--i:4"><a class="m1-t" href="/contact">Contact<span class="dash" aria-hidden="true"></span></a></li></ul></nav>
+    <div class="menu-foot">
+      <a class="btn btn-red" href="/contact">Request a quote <span class="arr">→</span></a>
+      <div class="menu-mail"><a href="mailto:sales@eps-global.com">GLOBAL · sales@eps-global.com ✉</a><a href="mailto:sales@eps-europe.com">EUROPE · sales@eps-europe.com ✉</a></div>
+      <div class="lang"><span aria-current="true" class="on">EN</span><a href="/de/sector-defense" hreflang="de">DE</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="machine shero" data-vslot="opener">
+  
+  <div class="footage"></div><div class="grain"></div><div class="scrim"></div>
+  <div class="vidtag"><span class="dot"></span> SECTOR VIDEO. AUTOPLAY · MUTED · LOOP · POSTER</div>
+  <div class="in">
+    
+    <h1 data-c="title">Defense</h1>
+    <p data-c="intro">Specification-first supply for demanding fleets. Where the datasheet is the conversation and the batch documentation travels with the drum.</p>
+    <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
+      <a class='btn btn-red' data-magnet href='/contact'>Talk to us <span class="arr">→</span></a>
+      <a class="btn btn-inv" href="#recs">Recommended products</a>
+    </div>
+  </div>
+  
+  <div class="ticks"></div>
+</div>
+
+<section><div class="wrap">
+  <div class="sec-head rv"><h2 class="disp">What this world demands</h2></div>
+  <div class="demands rv"><div class="dm"><h3>Specification compliance</h3><p>Products offered against your stated specification. Matched on paper before a litre moves.</p></div><div class="dm"><h3>Traceable batches</h3><p>Batch documentation retained and supplied with delivery, from base stock to drum number.</p></div><div class="dm"><h3>Dependable logistics</h3><p>Supply from Hamburg. Routes and lead times stated plainly.</p></div></div>
+</div></section>
+
+<section id="recs"><div class="wrap">
+  <div class="sec-head rv"><h2 class="disp">Recommended for performance</h2></div>
+  <div class="recs rv"><a class='rec' href='/family-motor'><span class="edge"></span><h4>EPS Motor</h4><span class="why">Engine oils to spec</span><span class="go">VIEW →</span></a><a class='rec' href='/family-hydro'><span class="edge"></span><h4>EPS Hydro</h4><span class="why">Hydraulic systems</span><span class="go">VIEW →</span></a><a class='rec' href='/family-gear'><span class="edge"></span><h4>EPS Gear</h4><span class="why">Drivetrain oils</span><span class="go">VIEW →</span></a><a class='rec' href='/family-arctic'><span class="edge"></span><h4>EPS Arctic</h4><span class="why">Low-temp operation</span><span class="go">VIEW →</span></a></div>
+</div></section>
+
+<section class="cta-band"><div class="glow"></div><div class="wrap in">
+  <div><h2>Procurement with a specification sheet?</h2><p>Send it. A compliant offer within 24 hours.</p></div>
+  <a class='btn btn-red' data-magnet href='/contact'>Start an inquiry <span class="arr">→</span></a>
+</div></section>
+
+<footer>
+  <div class="fgrid">
+    <div><img src="assets/eps-logo.webp" alt="EPS">
+      <p class="tag">Lubricants, AdBlue® and vehicle fluids to the highest standards.<br><span class="mono" style="font-size:10.5px;letter-spacing:.08em;color:var(--mute)">HAMBURG · GERMANY</span></p></div>
+    <div><h5>Sectors</h5><ul>
+      <li><a href='/sector-automotive'>Automotive</a></li><li><a href='/sector-performance'>Performance</a></li><li><a href='/sector-transport'>Transport</a></li>
+      <li><a href='/sector-industrial'>Industrial</a></li><li><a href='/sector-agrar'>Agrar</a></li><li><a href='/sector-defense'>Defense</a></li></ul></div>
+    <div><h5>Products</h5><ul>
+      <li><a href='/family-motor'>EPS Motor</a></li><li><a href='/family-gear'>EPS Gear</a></li><li><a href='/family-hydro'>EPS Hydro</a></li>
+      <li><a href='/family-blue'>EPS Blue</a></li><li><a href='/family-arctic'>EPS Arctic</a></li><li><a href='/products'>All families</a></li></ul></div>
+    <div><h5>Company</h5><ul>
+      <li><a href='/company'>About EPS</a></li><li><a href='/downloads'>Downloads</a></li><li><a href='/contact'>Contact</a></li>
+      <li><a href='/imprint'>Imprint</a></li><li><a href='/privacy'>Privacy</a></li><li><a class='js-cookie-settings' href='/privacy#cookies'>Cookie settings</a></li></ul></div>
+  </div>
+  <div class="legal">
+    <span>© 2026 EPS GmbH · Am Sandkaitorn 77, Hamburg, Germany</span>
+    <span>AdBlue® is a registered trademark of the Verband der Automobilindustrie e.V. (VDA)</span>
+  </div>
+</footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
+document.querySelectorAll('[data-magnet]').forEach(btn=>{
+  btn.addEventListener('mousemove',ev=>{const r=btn.getBoundingClientRect();
+    btn.style.transform=`translate(${(ev.clientX-r.left-r.width/2)/r.width*7}px, ${(ev.clientY-r.top-r.height/2)/r.height*5}px)`});
+  btn.addEventListener('mouseleave',()=>{btn.style.transform=''});
+});
+</script>
+<script>window.EPS_PREFIX="";</script>
+<script>
+/* EPS content loader — hydrates pages from content/en/{page}.json.
+   Pages work without it (inline defaults); JSON overrides when present. */
+(function(){
+const page=document.body.dataset.page; if(!page) return;
+const get=(o,p)=>p.split('.').reduce((a,k)=>a&&a[k],o);
+fetch('content/en/'+page+'.json').then(r=>r.ok?r.json():null).then(j=>{
+  if(!j) return;
+  document.querySelectorAll('[data-c]').forEach(el=>{
+    const v=get(j,el.dataset.c); if(typeof v==='string'&&v) el.innerHTML=v;
+  });
+  if(Array.isArray(j.sectors)) document.querySelectorAll('[data-si]').forEach(el=>{
+    const s=j.sectors[+el.dataset.si]; if(!s) return;
+    const h=el.querySelector('h3'); if(h&&s.title) h.textContent=s.title;
+    const p=el.querySelector('p'); if(p&&s.desc) p.textContent=s.desc;
+  });
+  document.querySelectorAll('[data-vslot]').forEach(el=>{
+    const v=j.videos&&j.videos[el.dataset.vslot]; if(!v||!v.video) return;
+    const vid=document.createElement('video');
+    vid.autoplay=true; vid.muted=true; vid.loop=true; vid.playsInline=true;
+    vid.setAttribute('playsinline',''); vid.preload='metadata';
+    vid.src=v.video; if(v.poster) vid.poster=v.poster;
+    vid.style.cssText='position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2';
+    const f=el.querySelector('.footage'); if(f) f.replaceWith(vid); else el.prepend(vid);
+  });
+  const esc=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  if(Array.isArray(j.products)){
+    const pl=document.getElementById('plist');
+    if(pl) pl.innerHTML=j.products.map(p=>`
+<div class="prow" data-f="${esc(p.tag)}"><span class="pn"><a href="${esc(p.url||'#')}">${esc(p.name)}</a><span class="sub">${esc(p.sub)}</span></span><span class="grade">${esc(p.grade)}</span><span>${(p.approvals||[]).map(a=>`<span class="chip">${esc(a)}</span>`).join('')}</span><span class="packs">${esc(p.packs)}</span><span class="act">${p.tds?`<a href="${esc(p.tds)}">TDS</a>`:''}${p.sds?`<a href="${esc(p.sds)}">SDS</a>`:''}${p.url?`<a class="main" href="${esc(p.url)}">VIEW</a>`:''}</span></div>`).join('');
+  }
+  if(Array.isArray(j.docs)){
+    const dl=document.getElementById('dlist');
+    if(dl) dl.innerHTML=j.docs.map(d=>`
+<div class="drow" data-f="${esc(d.type).toLowerCase()}"><span class="dn">${esc(d.name)}<span class="fam">${esc(d.family)}</span></span><span class="dt">${esc(d.type)} · PDF</span><span class="lang">${esc(d.lang||'EN')}</span><a class="get" href="${esc(d.file||'#')}">DOWNLOAD ↓</a></div>`).join('');
+  }
+}).catch(()=>{});
+})();
+
+</script>
+<script>
+/* EPS shared UI: progress, theme, mobile menu, back to top, cookie notice, video ready */
+(function(){
+"use strict";
+var root=document.documentElement, P=window.EPS_PREFIX||'';
+
+/* ---- theme ---- */
+function applyTheme(t){ if(t==='dark'){root.setAttribute('data-theme','dark');}else{root.removeAttribute('data-theme');} }
+var saved=null; try{saved=localStorage.getItem('eps-theme');}catch(e){}
+applyTheme('dark'); /* 2026: the site is dark-led */
+function toggleTheme(){
+  var dark=root.getAttribute('data-theme')==='dark';
+  applyTheme(dark?'light':'dark');
+  try{localStorage.setItem('eps-theme',dark?'light':'dark');}catch(e){}
+  syncThemeBtn();
+}
+var SUN='<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>';
+var MOON='<svg viewBox="0 0 24 24"><path d="M20 13.5A8 8 0 1 1 10.5 4a6.6 6.6 0 0 0 9.5 9.5z"/></svg>';
+function syncThemeBtn(){
+  var dark=root.getAttribute('data-theme')==='dark';
+  document.querySelectorAll('.js-theme').forEach(function(b){
+    b.innerHTML=dark?SUN:MOON;
+    b.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');
+    b.setAttribute('title',dark?'Light mode':'Dark mode');
+  });
+}
+
+document.addEventListener('DOMContentLoaded',function(){
+  var header=document.querySelector('header'),
+      bar=document.querySelector('.bar'),
+      nav=document.querySelector('nav[aria-label="Main"]'),
+      lang=document.querySelector('.lang');
+  var isDE=root.getAttribute('lang')==='de';
+  var t={
+    menu:isDE?'Menü':'Menu', close:isDE?'Schließen':'Close',
+    top:isDE?'Nach oben':'Back to top',
+    cookieText:isDE?'Diese Website verwendet keine Tracking- oder Werbe-Cookies. Nur Ihre Sprach- und Designeinstellung wird lokal in Ihrem Browser gespeichert.'
+                   :'This site uses no tracking or advertising cookies. Only your theme and language preference are stored locally in your browser.',
+    ok:isDE?'Verstanden':'Understood', privacy:isDE?'Datenschutz':'Privacy'
+  };
+
+  /* ---- progress bar ---- */
+  var pb=document.createElement('div'); pb.id='progress'; document.body.appendChild(pb);
+
+  /* ---- header utilities: theme + burger ---- */
+  if(bar){
+    var util=document.createElement('div'); util.className='util';
+    var tb=document.createElement('button'); tb.className='iconbtn js-theme'; tb.type='button';
+    tb.addEventListener('click',toggleTheme); util.appendChild(tb);
+    var bg=document.createElement('button'); bg.className='iconbtn burger'; bg.type='button';
+    bg.setAttribute('aria-label',t.menu); bg.setAttribute('aria-expanded','false');
+    bg.innerHTML='<svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>';
+    util.appendChild(bg);
+    if(lang) lang.parentNode.insertBefore(util,lang.nextSibling); else bar.appendChild(util);
+    syncThemeBtn();
+
+    /* ---- mobile menu ---- */
+    var mob=document.createElement('div'); mob.id='mobnav'; mob.setAttribute('aria-hidden','true');
+    var logo=document.querySelector('.bar .lg img');
+    var links='';
+    if(nav) nav.querySelectorAll('a').forEach(function(a){
+      links+='<a class="mlink" href="'+a.getAttribute('href')+'">'+a.textContent.trim()+'</a>';
+    });
+    var quote=document.querySelector('.bar .btn-red');
+    mob.innerHTML='<div class="mhead">'+(logo?'<img src="'+logo.getAttribute('src')+'" alt="EPS">':'<span></span>')+
+      '<button class="iconbtn js-close" type="button" aria-label="'+t.close+'"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>'+
+      '<nav aria-label="Mobile">'+links+'</nav>'+
+      '<div class="mfoot">'+(quote?'<a class="btn btn-red" href="'+quote.getAttribute('href')+'">'+quote.textContent.trim()+'</a>':'')+
+      (lang?'<div class="lang">'+lang.innerHTML+'</div>':'')+'</div>';
+    document.body.appendChild(mob);
+    function setNav(open){
+      mob.classList.toggle('open',open);
+      document.body.classList.toggle('navopen',open);
+      mob.setAttribute('aria-hidden',open?'false':'true');
+      bg.setAttribute('aria-expanded',open?'true':'false');
+      if(open){var f=mob.querySelector('.mlink'); if(f) f.focus();}
+    }
+    bg.addEventListener('click',function(){setNav(true);});
+    mob.querySelector('.js-close').addEventListener('click',function(){setNav(false);});
+    mob.addEventListener('click',function(e){if(e.target.classList.contains('mlink'))setNav(false);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mob.classList.contains('open'))setNav(false);});
+    addEventListener('resize',function(){if(innerWidth>900&&mob.classList.contains('open'))setNav(false);});
+  }
+
+  /* ---- back to top ---- */
+  var tt=document.createElement('button'); tt.id='totop'; tt.type='button';
+  tt.setAttribute('aria-label',t.top); tt.setAttribute('title',t.top);
+  tt.innerHTML='<svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+  tt.addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'});});
+  document.body.appendChild(tt);
+
+  /* ---- scroll driven ---- */
+  var ticking=false;
+  function onScroll(){
+    if(ticking) return; ticking=true;
+    requestAnimationFrame(function(){
+      var d=document.documentElement,
+          max=(d.scrollHeight-innerHeight)||1,
+          pct=Math.min(100,Math.max(0,scrollY/max*100));
+      pb.style.width=pct+'%';
+      tt.classList.toggle('show',scrollY>600);
+      ticking=false;
+    });
+  }
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  /* ---- video ready: stop the shimmer once footage can play ---- */
+  document.querySelectorAll('.machine').forEach(function(m){
+    var v=m.querySelector('video');
+    if(!v){m.classList.add('ready');return;}
+    if(v.readyState>=2) m.classList.add('ready');
+    ['loadeddata','canplay','error'].forEach(function(ev){
+      v.addEventListener(ev,function(){m.classList.add('ready');});
+    });
+    setTimeout(function(){m.classList.add('ready');},4000);
+  });
+});
+})();
+
+</script>
+<script>
+/* ==========================================================================
+   EPS consent manager  (GDPR / TTDSG)
+   --------------------------------------------------------------------------
+   HOW TO SWITCH ANALYTICS ON
+   1. Pick a provider below and paste your ID or token into CONFIG.
+   2. Commit. That is all.
+
+   Cloudflare Web Analytics : free, cookieless.  Token from the Cloudflare
+                              dashboard -> Web Analytics -> your site.
+   Plausible                : ~9 EUR/month, EU hosted, cookieless.
+                              domain = the domain you registered there.
+   Google Analytics 4       : sets cookies. Set gateBehindConsent:true and it
+                              will only load after the visitor opts in.
+   ========================================================================== */
+(function () {
+"use strict";
+
+var CONFIG = {
+  analytics: {
+    provider: 'none',          // 'none' | 'cloudflare' | 'plausible' | 'ga4'
+    token: '',                 // Cloudflare beacon token
+    domain: '',                // Plausible domain, e.g. eps-global.com
+    measurementId: '',         // GA4, e.g. G-XXXXXXXXXX
+    // Cookieless tools store nothing on the device, so they may run without
+    // consent. Set true to require an opt-in anyway (mandatory for GA4).
+    gateBehindConsent: false
+  },
+  marketing: {
+    linkedInPartnerId: '',     // LinkedIn Insight Tag
+    metaPixelId: ''            // Meta pixel
+  },
+  consentVersion: 1,
+  cookieName: 'eps_consent',
+  cookieDays: 182              // re-ask after six months
+};
+
+/* ---------- storage ---------- */
+function readConsent() {
+  var m = document.cookie.match(new RegExp('(?:^|; )' + CONFIG.cookieName + '=([^;]*)'));
+  if (!m) return null;
+  try {
+    var v = JSON.parse(decodeURIComponent(m[1]));
+    if (v.v !== CONFIG.consentVersion) return null;
+    return v;
+  } catch (e) { return null; }
+}
+function writeConsent(state) {
+  var v = { v: CONFIG.consentVersion, analytics: !!state.analytics, marketing: !!state.marketing, ts: Date.now() };
+  var exp = new Date(Date.now() + CONFIG.cookieDays * 864e5).toUTCString();
+  document.cookie = CONFIG.cookieName + '=' + encodeURIComponent(JSON.stringify(v)) +
+    ';expires=' + exp + ';path=/;SameSite=Lax' + (location.protocol === 'https:' ? ';Secure' : '');
+  return v;
+}
+function clearConsent() {
+  document.cookie = CONFIG.cookieName + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
+}
+
+/* ---------- signals ---------- */
+var gpc = (navigator.globalPrivacyControl === true) || (navigator.doNotTrack === '1');
+
+/* ---------- copy ---------- */
+var DE = document.documentElement.lang === 'de';
+var T = DE ? {
+  title: 'Cookies und Analyse',
+  body: 'Wir verwenden nur, was diese Website zum Funktionieren braucht. Optional messen wir anonym, welche Seiten aufgerufen werden, um die Website zu verbessern. Sie entscheiden.',
+  accept: 'Alle akzeptieren', reject: 'Alle ablehnen', settings: 'Einstellungen', save: 'Auswahl speichern',
+  necessary: 'Notwendig', necessaryTxt: 'Sprache, Farbschema und Ihre Cookie-Entscheidung. Ohne diese funktioniert die Seite nicht wie erwartet. Immer aktiv.',
+  analytics: 'Analyse', analyticsTxt: 'Anonyme Reichweitenmessung: welche Seiten besucht werden und woher Besucher kommen. Keine Profile, keine Weitergabe.',
+  marketing: 'Marketing', marketingTxt: 'Messung von Werbekampagnen und Retargeting. Derzeit nicht im Einsatz.',
+  privacy: 'Datenschutz', close: 'Schließen', always: 'Immer aktiv'
+} : {
+  title: 'Cookies and analytics',
+  body: 'We use only what this site needs to work. Optionally we measure anonymously which pages get visited so we can improve the site. Your choice.',
+  accept: 'Accept all', reject: 'Reject all', settings: 'Settings', save: 'Save choice',
+  necessary: 'Necessary', necessaryTxt: 'Language, colour theme and your cookie choice. Without these the site will not behave as expected. Always on.',
+  analytics: 'Analytics', analyticsTxt: 'Anonymous audience measurement: which pages are visited and where visitors arrive from. No profiles, no sharing.',
+  marketing: 'Marketing', marketingTxt: 'Advertising campaign measurement and retargeting. Not currently in use.',
+  privacy: 'Privacy', close: 'Close', always: 'Always on'
+};
+
+/* ---------- script activation ---------- */
+function activate(category) {
+  document.querySelectorAll('script[type="text/plain"][data-consent="' + category + '"]').forEach(function (tpl) {
+    var s = document.createElement('script');
+    for (var i = 0; i < tpl.attributes.length; i++) {
+      var a = tpl.attributes[i];
+      if (a.name === 'type' || a.name === 'data-consent') continue;
+      s.setAttribute(a.name === 'data-src' ? 'src' : a.name, a.value);
+    }
+    if (!tpl.getAttribute('data-src') && tpl.textContent.trim()) s.text = tpl.textContent;
+    tpl.parentNode.insertBefore(s, tpl);
+    tpl.remove();
+  });
+}
+
+function loadAnalytics() {
+  var a = CONFIG.analytics, s;
+  if (a.provider === 'cloudflare' && a.token) {
+    s = document.createElement('script');
+    s.defer = true; s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    s.setAttribute('data-cf-beacon', JSON.stringify({ token: a.token }));
+    document.head.appendChild(s);
+  } else if (a.provider === 'plausible' && a.domain) {
+    s = document.createElement('script');
+    s.defer = true; s.src = 'https://plausible.io/js/script.js';
+    s.setAttribute('data-domain', a.domain);
+    document.head.appendChild(s);
+  } else if (a.provider === 'ga4' && a.measurementId) {
+    s = document.createElement('script');
+    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + a.measurementId;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', a.measurementId, { anonymize_ip: true });
+  }
+}
+function loadMarketing() {
+  var m = CONFIG.marketing, s;
+  if (m.linkedInPartnerId) {
+    window._linkedin_partner_id = m.linkedInPartnerId;
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(m.linkedInPartnerId);
+    s = document.createElement('script'); s.async = true;
+    s.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
+    document.head.appendChild(s);
+  }
+}
+
+function apply(state) {
+  if (state.analytics || (!CONFIG.analytics.gateBehindConsent && CONFIG.analytics.provider !== 'ga4')) {
+    loadAnalytics(); activate('analytics');
+  }
+  if (state.marketing) { loadMarketing(); activate('marketing'); }
+  document.dispatchEvent(new CustomEvent('eps:consent', { detail: state }));
+}
+
+/* ---------- UI ---------- */
+function el(tag, cls, html) {
+  var e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (html != null) e.innerHTML = html;
+  return e;
+}
+
+function build() {
+    var box = el('div', 'cc', '');
+  box.id = 'cc';
+  box.setAttribute('role', 'dialog');
+  box.setAttribute('aria-live', 'polite');
+  box.setAttribute('aria-label', T.title);
+  box.innerHTML =
+    '<div class="cc-main">' +
+      '<h2>' + T.title + '</h2>' +
+      '<p>' + T.body + '</p>' +
+      '<div class="cc-row">' +
+        '<button class="btn btn-red btn-sm js-acc" type="button">' + T.accept + '</button>' +
+        '<button class="btn btn-sm js-rej" type="button">' + T.reject + '</button>' +
+        '<button class="cc-link js-set" type="button">' + T.settings + '</button>' +
+        '<a class="cc-link" href="privacy.html#cookies">' + T.privacy + '</a>' +
+      '</div>' +
+    '</div>' +
+    '<div class="cc-panel" hidden>' +
+      '<div class="cc-cat"><div class="cc-cat-h"><b>' + T.necessary + '</b><span class="cc-always">' + T.always + '</span></div><p>' + T.necessaryTxt + '</p></div>' +
+      '<div class="cc-cat"><div class="cc-cat-h"><b>' + T.analytics + '</b>' +
+        '<label class="cc-sw"><input type="checkbox" class="js-an"><span></span></label></div><p>' + T.analyticsTxt + '</p></div>' +
+      '<div class="cc-cat"><div class="cc-cat-h"><b>' + T.marketing + '</b>' +
+        '<label class="cc-sw"><input type="checkbox" class="js-mk"><span></span></label></div><p>' + T.marketingTxt + '</p></div>' +
+      '<div class="cc-row"><button class="btn btn-red btn-sm js-save" type="button">' + T.save + '</button>' +
+        '<button class="cc-link js-back" type="button">' + T.close + '</button></div>' +
+    '</div>';
+  document.body.appendChild(box);
+
+  var panel = box.querySelector('.cc-panel'),
+      main = box.querySelector('.cc-main'),
+      an = box.querySelector('.js-an'),
+      mk = box.querySelector('.js-mk');
+
+  function show() { requestAnimationFrame(function () { box.classList.add('show'); }); }
+  function hide() { box.classList.remove('show'); }
+  function decide(state) { apply(writeConsent(state)); hide(); }
+
+  box.querySelector('.js-acc').onclick = function () { decide({ analytics: true, marketing: true }); };
+  box.querySelector('.js-rej').onclick = function () { decide({ analytics: false, marketing: false }); };
+  box.querySelector('.js-save').onclick = function () { decide({ analytics: an.checked, marketing: mk.checked }); };
+  box.querySelector('.js-set').onclick = function () { main.hidden = true; panel.hidden = false; };
+  box.querySelector('.js-back').onclick = function () { panel.hidden = true; main.hidden = false; };
+
+  window.EPSConsent = {
+    open: function () {
+      var c = readConsent() || { analytics: false, marketing: false };
+      an.checked = !!c.analytics; mk.checked = !!c.marketing;
+      main.hidden = true; panel.hidden = false; show();
+    },
+    show: show, get: readConsent, reset: function () { clearConsent(); location.reload(); }
+  };
+  return { show: show, main: main, panel: panel, an: an, mk: mk };
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  var ui = build();
+  var saved = readConsent();
+
+  if (saved) {
+    apply(saved);
+  } else if (gpc) {
+    // Browser signals "do not track" — honour it without nagging.
+    apply(writeConsent({ analytics: false, marketing: false }));
+  } else {
+    // Cookieless analytics that is not gated may run before a choice is made.
+    if (!CONFIG.analytics.gateBehindConsent && CONFIG.analytics.provider !== 'ga4' && CONFIG.analytics.provider !== 'none') loadAnalytics();
+    setTimeout(ui.show, 1200);
+  }
+
+  // footer link re-opens the settings panel
+  document.querySelectorAll('.js-cookie-settings').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); window.EPSConsent.open(); });
+  });
+});
+})();
+
+</script>
+<script src="assets/eps-2026.js?v=6c33a4af"></script>
+</body>
+</html>
